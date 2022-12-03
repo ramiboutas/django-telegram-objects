@@ -58,6 +58,7 @@ Add it to your installed apps:
 
 
 Make sure you are using a Postgres database and migrate the tables:
+
 .. code-block:: sh
 
     python manage.py migrate
@@ -90,6 +91,7 @@ and access to the key using ``os.environ.get`` method:
 Add models you would like to see in your Django admin:
 
 Example:
+
 .. code-block:: python
 
     TELEGRAM_MODELS_IN_ADMIN_SITE = (
