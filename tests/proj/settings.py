@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 import os
-import dotenv
 from pathlib import Path
+
+import dotenv
 
 
 # Build paths inside the project like this: BASE_DIR / "subdir".
@@ -27,9 +28,7 @@ INTERNAL_IPS = [
     "localhost",
 ]
 
-ALLOWED_HOSTS = [
-    "*"
-]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -39,7 +38,6 @@ INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
-
 ]
 
 MIDDLEWARE = [

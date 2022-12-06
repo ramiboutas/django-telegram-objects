@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 import urllib.parse
 import urllib.request
@@ -94,18 +96,18 @@ def get_telegram_updates():
         response_dict = data["result"]
 
     else:
-        print("There was an error getting updates. Status code: {status_code}") # TODO: improve error message
+        print(
+            "There was an error getting updates. Status code: {status_code}"
+        )  # TODO: improve error message
         ok = False
         response_dict = {}
     return (response_dict, ok)
-
 
 
 def send_info_to_chat(chat_id: str, text: str):
     base_url = f"https://api.telegram.org/bot{bot}/sendMessage"
     parameters = {"chat_id": chat_id, "text": text}
     make_request(endpoint=base_url, parameters=parameters)
-
 
 
 def create_update_objects(dict_of_updates: dict):
@@ -222,6 +224,7 @@ def get_or_create_subsubrelated_object(Klass, object_dict):
 
 # TODO: _clean_object_dict & _validate_field_name need to be combined
 
+
 def _clean_object_dict(object_dict: dict):
 
     for key in object_dict.copy().keys():
@@ -243,7 +246,7 @@ def _clean_object_dict(object_dict: dict):
 
 
 def _validate_field_name(field_name: str):
-    
+
     if field_name == "from":
         field_name = "user"
     if field_name == "id":

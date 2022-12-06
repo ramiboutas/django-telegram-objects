@@ -6,7 +6,7 @@ body:
   attributes:
     label: Understanding django-telegram-objects
     description: >
-      In oder to avoid getting nonsense issues, please read the README, 
+      In oder to avoid getting nonsense issues, please read the README,
       [the resources in the README](https://github.com/ramiboutas/django-telegram-objects#about).
       Please confirm that you have read the resources on the package before submitting your issue.
     options:

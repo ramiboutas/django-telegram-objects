@@ -2,7 +2,7 @@
 django-telegram-objects
 =======================
 
-.. image:: https://img.shields.io/github/workflow/status/ramiboutas/django-telegram-objects/CI/main?style=for-the-badge
+.. image:: https://img.shields.io/github/workflow/status/ramiboutas/django-telegram-objects/CI/master?style=for-the-badge
    :target: https://github.com/ramiboutas/django-telegram-objects/actions?workflow=CI
 
 .. image:: https://img.shields.io/badge/Coverage-100%25-success?style=for-the-badge
@@ -65,21 +65,8 @@ Make sure you are using a Postgres database and migrate the tables:
 
 
 
-
-How to use
-----------
-
-Once the app is set up, you can get updates by running the command:
-
-.. code-block:: sh
-
-    python manage.py get_updates
-
-
-
-
-Configuration
--------------
+Set up
+------
 
 In you project settings:
 
@@ -93,7 +80,7 @@ Recommendation: save your bot token a .env file
 
 
 Load your secrets keys and tokens using,
-for example, [python-dotenv](https://pypi.org/project/python-dotenv/) 
+for example, [python-dotenv](https://pypi.org/project/python-dotenv/)
 and access to the key using ``os.environ.get`` method:
 
 .. code-block:: python
@@ -114,4 +101,11 @@ Example:
     )
 
 
+How to use
+----------
 
+Once the app is set up, you can get updates by running the command:
+
+.. code-block:: sh
+
+    python manage.py get_updates

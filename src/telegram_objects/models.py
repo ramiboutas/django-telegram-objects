@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import auto_prefetch
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
@@ -5048,22 +5050,40 @@ class ChatMember(models.Model):
     # members are supported:
     # https://core.telegram.org/bots/api#chatmember
     ChatMemberOwner = auto_prefetch.OneToOneField(
-        "telegram_objects.ChatMemberOwner", null=True, blank=True, on_delete=models.SET_NULL
+        "telegram_objects.ChatMemberOwner",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
     )
     ChatMemberAdministrator = auto_prefetch.OneToOneField(
-        "telegram_objects.ChatMemberAdministrator", null=True, blank=True, on_delete=models.SET_NULL
+        "telegram_objects.ChatMemberAdministrator",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
     )
     ChatMemberMember = auto_prefetch.OneToOneField(
-        "telegram_objects.ChatMemberMember", null=True, blank=True, on_delete=models.SET_NULL
+        "telegram_objects.ChatMemberMember",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
     )
     ChatMemberRestricted = auto_prefetch.OneToOneField(
-        "telegram_objects.ChatMemberRestricted", null=True, blank=True, on_delete=models.SET_NULL
+        "telegram_objects.ChatMemberRestricted",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
     )
     ChatMemberLeft = auto_prefetch.OneToOneField(
-        "telegram_objects.ChatMemberLeft", null=True, blank=True, on_delete=models.SET_NULL
+        "telegram_objects.ChatMemberLeft",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
     )
     ChatMemberBanned = auto_prefetch.OneToOneField(
-        "telegram_objects.ChatMemberBanned", null=True, blank=True, on_delete=models.SET_NULL
+        "telegram_objects.ChatMemberBanned",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
     )
 
 
@@ -5072,7 +5092,10 @@ class InputMessageContent(models.Model):
     # currently support the following 5 types:
     # https://core.telegram.org/bots/api#inputmessagecontent
     InputTextMessageContent = auto_prefetch.OneToOneField(
-        "telegram_objects.InputTextMessageContent", null=True, blank=True, on_delete=models.SET_NULL
+        "telegram_objects.InputTextMessageContent",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
     )
     InputLocationMessageContent = auto_prefetch.OneToOneField(
         "telegram_objects.InputLocationMessageContent",

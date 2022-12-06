@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import importlib
 
 from django.conf import settings
@@ -5,6 +7,7 @@ from django.contrib import admin
 from django.db import models
 
 from . import models as core_models
+
 
 # https://stackoverflow.com/questions/63172053/list-classes-in-python-file
 def get_models(module):
@@ -16,7 +19,7 @@ def get_models(module):
 
 
 try:
-    models_to_register = getattr(settings, "TELEGRAM_MODELS_IN_ADMIN_SITE")
+    models_to_register = settings.TELEGRAM_MODELS_IN_ADMIN_SITE
     register_all_models = False
 except AttributeError:
     register_all_models = True

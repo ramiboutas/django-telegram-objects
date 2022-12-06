@@ -1,4 +1,5 @@
-from django.conf import settings
+from __future__ import annotations
+
 from django.core.management.base import BaseCommand
 from django.db import transaction
 
@@ -21,4 +22,4 @@ def get_updates_and_save_to_db():
     if ok:
         create_update_objects(response_dict)
     else:
-        print("getUpdates not ok") # TODO: improve error message
+        print("getUpdates not ok")  # TODO: improve error message
