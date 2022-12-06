@@ -65,6 +65,19 @@ Make sure you are using a Postgres database and migrate the tables:
 
 
 
+
+How to use
+----------
+
+Once the app is set up, you can get updates by running the command:
+
+.. code-block:: sh
+
+    python manage.py get_updates
+
+
+
+
 Configuration
 -------------
 
@@ -99,4 +112,6 @@ Example:
         "Message",
         "Document",
     )
+
+
 

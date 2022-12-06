@@ -1,6 +1,7 @@
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
+dependencies = ["django-auto-prefetch"]
 
 [tool.black]
 target-version = ['py37']
