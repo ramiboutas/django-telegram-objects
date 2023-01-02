@@ -3,9 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-dependencies = [
-    "django-auto-prefetch"
-]
+dependencies = ["django-auto-prefetch"]
 
 [tool.black]
 target-version = ['py37']
@@ -18,3 +16,4 @@ addopts = """\
     --ds=tests.settings
     """
 django_find_project = false
+

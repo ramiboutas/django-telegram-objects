@@ -1,5 +1,6 @@
 coverage
 django
 pytest
+pytest-django
 python-dotenv
 django-auto-prefetch
