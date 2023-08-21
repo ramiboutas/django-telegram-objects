@@ -226,7 +226,6 @@ def get_or_create_subsubrelated_object(Klass, object_dict):
 
 
 def _clean_object_dict(object_dict: dict):
-
     for key in object_dict.copy().keys():
         # empty keys -> set to None
         if object_dict[key] == []:
@@ -246,7 +245,6 @@ def _clean_object_dict(object_dict: dict):
 
 
 def _validate_field_name(field_name: str):
-
     if field_name == "from":
         field_name = "user"
     if field_name == "id":
